@@ -14,6 +14,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <surefire.parallel>1</surefire.parallel>
         <selenium.version>4.28.1</selenium.version>
+        <apache.commons.lang.version>3.17.0</apache.commons.lang.version>
+        <junit.jupiter.version>5.11.4</junit.jupiter.version>
+        <surefire.version>3.5.2</surefire.version>
     </properties>
 
     <repositories>
@@ -35,9 +38,21 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.11.4</version>
+            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${apache.commons.lang.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -45,7 +60,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.2</version>
+                <version>${surefire.version}</version>
                 <configuration>
                     <properties>
                         <configurationParameters>
