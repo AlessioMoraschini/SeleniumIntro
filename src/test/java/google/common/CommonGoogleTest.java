@@ -54,7 +54,7 @@ public abstract class CommonGoogleTest {
     /**
      * Verify that the cookies overlay disappears after clicking the cookies acceptance buttons
      */
-    @ParameterizedTest
+    @ParameterizedTest(name = "Test reachability with cookies acceptance: {0}")
     @CsvSource({"true","false"})
     void reachabilityTestAccept(Boolean acceptCookies) {
 
@@ -67,7 +67,7 @@ public abstract class CommonGoogleTest {
     /**
      * Verify that the google main page contains the "Immagini" section
      */
-    @ParameterizedTest
+    @ParameterizedTest(name = "Test image loading with cookies acceptance: {0}")
     @CsvSource({"true","false"})
     void imageLoadingTest(Boolean acceptCookies) {
         var acceptAndRejectBtns = commonCookiePageLoadAndAssert();

@@ -1,6 +1,7 @@
 package google.firefox;
 
 import google.common.CommonGoogleTest;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -26,6 +27,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
  * "docker run -d --link selenium-hub:hub selenium/node-firefox:latest"
  * And then you can use the same java code as above.
  */
+@DisplayName("Firefox Test")
 public class GoogleTest extends CommonGoogleTest {
     @Override
     protected RemoteWebDriver getWebDriver() {

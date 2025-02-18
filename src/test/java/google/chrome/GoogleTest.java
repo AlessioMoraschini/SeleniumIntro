@@ -1,6 +1,7 @@
 package google.chrome;
 
 import google.common.CommonGoogleTest;
+import org.junit.jupiter.api.DisplayName;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,6 +29,7 @@ import java.time.Duration;
  * "docker run -d --link selenium-hub:hub selenium/node-chrome:latest"
  * And then you can use the same java code as above.
  */
+@DisplayName("Google Chrome Test")
 public class GoogleTest extends CommonGoogleTest {
     @Override
     protected RemoteWebDriver getWebDriver() {
